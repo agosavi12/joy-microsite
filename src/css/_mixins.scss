@@ -1,0 +1,29 @@
+$media-breakpoints: (
+	xs: 576,
+	sm: 768,
+	md: 991,
+	lg: 1025,
+	xl: 1366,
+	xxl: 1900,
+	xxxl: 2500,
+);
+@mixin media-min($sz: "xs") {
+	$size: map-get($media-breakpoints, $sz);
+	@media (min-width: #{$size}px) {
+		@content;
+	}
+}
+
+@mixin media-max($sz: "xs") {
+	$val: map-get($media-breakpoints, $sz);
+	$size: $val - 0.02;
+	@media (max-width: #{$size}px) {
+		@content;
+	}
+}
+
+@mixin IE11 {
+	@media all and (-ms-high-contrast: none) {
+		@content;
+	}
+}

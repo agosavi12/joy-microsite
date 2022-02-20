@@ -1,0 +1,27 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 999;
+	background-color: #f9f9f9;
+	.navbar {
+		padding-top: 0;
+		padding-bottom: 0;
+
+		.navbar-brand {
+			max-width: 100px;
+			margin-right: 5rem;
+		}
+
+		.navbar-nav {
+			.nav-link {
+				font-size: 1.25rem;
+				font-family: $prata;
+				padding-right: 1rem;
+				padding-left: 1rem;
+			}
+		}
+	}
+}
